@@ -15,6 +15,7 @@
 		BD791FE525E43CE700F066CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD791FE325E43CE700F066CE /* LaunchScreen.storyboard */; };
 		BD791FF025E43CE800F066CE /* SolarSystemAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FEF25E43CE800F066CE /* SolarSystemAppTests.swift */; };
 		BD791FFB25E43CE800F066CE /* SolarSystemAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FFA25E43CE800F066CE /* SolarSystemAppUITests.swift */; };
+		BDD1534525E4ED8200DD2A4D /* DataComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1534425E4ED8200DD2A4D /* DataComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BD791FF625E43CE800F066CE /* SolarSystemAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarSystemAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD791FFA25E43CE800F066CE /* SolarSystemAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemAppUITests.swift; sourceTree = "<group>"; };
 		BD791FFC25E43CE800F066CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD1534425E4ED8200DD2A4D /* DataComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BD791FE125E43CE700F066CE /* Assets.xcassets */,
 				BD791FE325E43CE700F066CE /* LaunchScreen.storyboard */,
 				BD791FE625E43CE700F066CE /* Info.plist */,
+				BDD1534425E4ED8200DD2A4D /* DataComponents.swift */,
 			);
 			path = SolarSystemApp;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD1534525E4ED8200DD2A4D /* DataComponents.swift in Sources */,
 				BD791FDD25E43CE700F066CE /* ViewController.swift in Sources */,
 				BD791FD925E43CE700F066CE /* AppDelegate.swift in Sources */,
 				BD791FDB25E43CE700F066CE /* SceneDelegate.swift in Sources */,
