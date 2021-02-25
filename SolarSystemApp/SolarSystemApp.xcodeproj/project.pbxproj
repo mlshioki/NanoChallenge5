@@ -19,6 +19,7 @@
 		BD791FFB25E43CE800F066CE /* SolarSystemAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FFA25E43CE800F066CE /* SolarSystemAppUITests.swift */; };
 		BDD1535B25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD1535A25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard */; };
 		BDD1536025E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1535F25E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift */; };
+		BDD1534525E4ED8200DD2A4D /* DataComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1534425E4ED8200DD2A4D /* DataComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BD791FFC25E43CE800F066CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD1535A25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedScreenMoon.storyboard; sourceTree = "<group>"; };
 		BDD1535F25E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedScreenMoonViewController.swift; sourceTree = "<group>"; };
+		BDD1534425E4ED8200DD2A4D /* DataComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				BD791FE625E43CE700F066CE /* Info.plist */,
 				BDD1535A25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard */,
 				BDD1535F25E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift */,
+				BDD1534425E4ED8200DD2A4D /* DataComponents.swift */,
 			);
 			path = SolarSystemApp;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD1536025E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift in Sources */,
+				BDD1534525E4ED8200DD2A4D /* DataComponents.swift in Sources */,
 				BD791FDD25E43CE700F066CE /* ViewController.swift in Sources */,
 				BD791FD925E43CE700F066CE /* AppDelegate.swift in Sources */,
 				BD791FDB25E43CE700F066CE /* SceneDelegate.swift in Sources */,
