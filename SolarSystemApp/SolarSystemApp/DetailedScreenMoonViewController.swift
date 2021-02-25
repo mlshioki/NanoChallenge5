@@ -7,23 +7,26 @@
 
 import UIKit
 
-class DetailedScreenViewController: UIViewController {
+class DetailedScreenMoonViewController: UIViewController {
 
+    var id: String?
+    
+    @IBOutlet var moonImage: UIImageView!
+    @IBOutlet weak var moonName: UILabel!
+    @IBOutlet weak var size: UILabel!
+    @IBOutlet weak var gravity: UILabel!
+    @IBOutlet weak var discoveryDate: UILabel!
+    @IBOutlet weak var alternativeName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        moonImage.image = UIImage(named: "")
+        moonName.text = ""
+        size.text = ""
+        gravity.text = ""
+        discoveryDate.text = ""
+        alternativeName.text = ""
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
