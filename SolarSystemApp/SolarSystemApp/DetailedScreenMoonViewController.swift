@@ -9,7 +9,7 @@ import UIKit
 
 class DetailedScreenMoonViewController: UIViewController {
 
-    var id: String = ""
+    var id: String = "Earth"
     
     @IBOutlet var moonImage: UIImageView!
     @IBOutlet weak var moonName: UILabel!
@@ -30,5 +30,6 @@ class DetailedScreenMoonViewController: UIViewController {
         discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
         alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
         
+        print(data.moons?[0])
     }
 }

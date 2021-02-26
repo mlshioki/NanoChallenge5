@@ -146,7 +146,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Terra" width="1772" height="1772"/>
+        <image name="Terra" width="886" height="886"/>
         <image name="Terra-1" width="270.66665649414062" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

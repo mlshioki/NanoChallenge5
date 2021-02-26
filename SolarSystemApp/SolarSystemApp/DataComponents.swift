@@ -17,6 +17,12 @@ struct Body: Codable{
     let meanRadius: Double?
     let discoveryDate: String?
     let alternativeName: String?
+    let moons: [Moon]?
+}
+
+struct Moon: Codable {
+    let moon: String?
+    let rel: String?
 }
 
 //usar a func abaixo quando for delegar para outra classe

@@ -139,7 +139,7 @@
     </scenes>
     <resources>
         <image name="Espaco" width="5262" height="3720"/>
-        <image name="Quadro" width="1675" height="1425"/>
+        <image name="Quadro" width="1772" height="1495"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
