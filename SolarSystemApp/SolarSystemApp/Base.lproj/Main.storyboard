@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,18 +13,106 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SolarSystemApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN1-3R-9sV">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-xt-2gV">
+                                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sistema solar" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-Ef-eeL">
+                                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="628-m6-nLh" userLabel="Sol">
+                                                <rect key="frame" x="10" y="86" width="258" height="257"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqQ-fZ-AZg" userLabel="Mercurio">
+                                                <rect key="frame" x="285" y="214" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-OF-x5w" userLabel="Venus">
+                                                <rect key="frame" x="318" y="209" width="36" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGE-vg-jo8" userLabel="Terra">
+                                                <rect key="frame" x="361" y="203" width="47" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-VV-XYm" userLabel="Marte">
+                                                <rect key="frame" x="416" y="205" width="44" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtP-gf-2Xu" userLabel="Jupiter">
+                                                <rect key="frame" x="473" y="170" width="113" height="114"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-Kl-1xk" userLabel="Saturno">
+                                                <rect key="frame" x="603" y="176" width="99" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ7-YK-RG4" userLabel="Urano">
+                                                <rect key="frame" x="718" y="191" width="71" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNQ-Mb-peZ" userLabel="Netuno">
+                                                <rect key="frame" x="803" y="196" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Nz0-Ef-eeL" secondAttribute="bottom" id="2fa-yt-OmL"/>
+                                            <constraint firstItem="Nz0-Ef-eeL" firstAttribute="leading" secondItem="JCn-xt-2gV" secondAttribute="leading" id="HD1-1H-Paq"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nz0-Ef-eeL" secondAttribute="trailing" id="ajb-aa-uph"/>
+                                            <constraint firstItem="Nz0-Ef-eeL" firstAttribute="top" secondItem="JCn-xt-2gV" secondAttribute="top" id="uVV-1e-m3c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JCn-xt-2gV" secondAttribute="bottom" id="9gd-8X-f5u"/>
+                                    <constraint firstItem="JCn-xt-2gV" firstAttribute="leading" secondItem="XN1-3R-9sV" secondAttribute="leading" id="ADi-bK-xYw"/>
+                                    <constraint firstAttribute="trailing" secondItem="JCn-xt-2gV" secondAttribute="trailing" id="dct-oU-1Ir"/>
+                                    <constraint firstItem="JCn-xt-2gV" firstAttribute="top" secondItem="XN1-3R-9sV" secondAttribute="top" id="jTd-7W-f1t"/>
+                                    <constraint firstItem="JCn-xt-2gV" firstAttribute="height" secondItem="XN1-3R-9sV" secondAttribute="height" id="kVf-AY-XfX"/>
+                                    <constraint firstItem="JCn-xt-2gV" firstAttribute="width" secondItem="XN1-3R-9sV" secondAttribute="width" id="sdq-Cq-C08"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Xle-hy-Ape"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="etx-40-NNO"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XN1-3R-9sV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7n4-W8-hFZ"/>
+                            <constraint firstItem="XN1-3R-9sV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iAr-B2-MJU"/>
+                            <constraint firstAttribute="bottom" secondItem="XN1-3R-9sV" secondAttribute="bottom" id="xUh-Ww-l6P"/>
+                            <constraint firstAttribute="trailing" secondItem="XN1-3R-9sV" secondAttribute="trailing" id="y7o-UK-bAu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="earth" destination="iGE-vg-jo8" id="CMF-lu-lrq"/>
+                        <outlet property="jupiter" destination="jtP-gf-2Xu" id="qfD-f4-5uA"/>
+                        <outlet property="mars" destination="tbl-VV-XYm" id="8l4-Xi-uEz"/>
+                        <outlet property="mercury" destination="zqQ-fZ-AZg" id="Rpa-Oz-YBj"/>
+                        <outlet property="neptune" destination="uNQ-Mb-peZ" id="xI7-HA-mPX"/>
+                        <outlet property="saturn" destination="ag5-Kl-1xk" id="UEu-KC-KXS"/>
+                        <outlet property="scrollView" destination="XN1-3R-9sV" id="EEW-rk-w0z"/>
+                        <outlet property="sun" destination="628-m6-nLh" id="EKv-IW-C2d"/>
+                        <outlet property="thisView" destination="JCn-xt-2gV" id="pqa-bD-IHx"/>
+                        <outlet property="uranus" destination="wZ7-YK-RG4" id="HBQ-Fs-Uw2"/>
+                        <outlet property="venus" destination="5Xl-OF-x5w" id="yqA-6U-syn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="56"/>
+            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Sistema solar" width="1754" height="1240"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
