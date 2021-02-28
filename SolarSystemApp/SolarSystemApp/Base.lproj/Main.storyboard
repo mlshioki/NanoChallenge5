@@ -112,7 +112,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Sistema solar" width="1754" height="1240"/>
+        <image name="Sistema solar" width="5262" height="3720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
