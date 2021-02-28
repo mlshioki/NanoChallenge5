@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x4z-Kk-Azd">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,10 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Espaco" translatesAutoresizingMaskIntoConstraints="NO" id="9W0-57-Xxi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Space" translatesAutoresizingMaskIntoConstraints="NO" id="9W0-57-Xxi" userLabel="Space">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIR-eF-ao2" userLabel="Meio">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIR-eF-ao2" userLabel="Middle">
                                 <rect key="frame" x="448" y="207" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -27,53 +27,86 @@
                                     <constraint firstAttribute="width" id="yXq-Je-88n"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFR-lh-lvE">
-                                <rect key="frame" x="54" y="50" width="384" height="293"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth" translatesAutoresizingMaskIntoConstraints="NO" id="DFR-lh-lvE">
+                                <rect key="frame" x="54" y="60" width="244" height="273"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knG-vU-HsW">
-                                <rect key="frame" x="448" y="50" width="394" height="293"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knG-vU-HsW" userLabel="Board View">
+                                <rect key="frame" x="328" y="55" width="518" height="304"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quadro" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-nx-BRE">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="293"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-nx-BRE" userLabel="Board">
+                                        <rect key="frame" x="0.0" y="0.0" width="518" height="304"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-eP-RAr">
-                                        <rect key="frame" x="33" y="47.5" width="328" height="198"/>
+                                        <rect key="frame" x="58" y="45" width="427" height="214"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terra " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-DA-Ec7">
-                                                <rect key="frame" x="0.0" y="0.0" width="328" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-DA-Ec7">
+                                                <rect key="frame" x="0.0" y="0.0" width="427" height="30.666666666666668"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Terra">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="22" name="SFCompactRounded-Bold"/>
+                                                            <font key="NSOriginalFont" size="20" name="SFCompactRounded-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgb-xA-nSr">
-                                                <rect key="frame" x="0.0" y="35.5" width="328" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-v1-PNz">
+                                                <rect key="frame" x="0.0" y="45.666666666666657" width="427" height="31"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A40-yy-7gM">
-                                                <rect key="frame" x="0.0" y="71" width="328" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A40-yy-7gM">
+                                                <rect key="frame" x="0.0" y="91.666666666666657" width="427" height="30.666666666666671"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.97668689489364624" green="0.99197584390640259" blue="0.97628039121627808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-v1-PNz">
-                                                <rect key="frame" x="0.0" y="106.5" width="328" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-f2-7KA">
+                                                <rect key="frame" x="0.0" y="137.33333333333334" width="427" height="31"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                                            <font key="NSOriginalFont" size="18" name="SFProRounded-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-f2-7KA">
-                                                <rect key="frame" x="0.0" y="142" width="328" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG5-0M-ItI">
-                                                <rect key="frame" x="0.0" y="177.5" width="328" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG5-0M-ItI">
+                                                <rect key="frame" x="0.0" y="183.33333333333331" width="427" height="30.666666666666657"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                                            <font key="NSOriginalFont" size="18" name="SFProRounded-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                         </subviews>
                                         <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
@@ -83,11 +116,11 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6Wk-nx-BRE" secondAttribute="bottom" id="6sN-TA-fSq"/>
                                     <constraint firstItem="6Wk-nx-BRE" firstAttribute="leading" secondItem="knG-vU-HsW" secondAttribute="leading" id="CzS-uA-Squ"/>
-                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="centerX" secondItem="knG-vU-HsW" secondAttribute="centerX" id="Sq1-Jp-XZR"/>
+                                    <constraint firstAttribute="bottom" secondItem="TfP-eP-RAr" secondAttribute="bottom" constant="45" id="HcG-C8-Qgo"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="TfP-eP-RAr" secondAttribute="trailing" constant="25" id="U0p-qd-9Ji"/>
-                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="centerY" secondItem="knG-vU-HsW" secondAttribute="centerY" id="VMi-df-wtB"/>
                                     <constraint firstItem="6Wk-nx-BRE" firstAttribute="top" secondItem="knG-vU-HsW" secondAttribute="top" id="Xln-xP-pBM"/>
-                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="leading" secondItem="knG-vU-HsW" secondAttribute="leadingMargin" constant="25" id="q9a-DF-BOG"/>
+                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="leading" secondItem="knG-vU-HsW" secondAttribute="leadingMargin" constant="50" id="q9a-DF-BOG"/>
+                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="top" secondItem="knG-vU-HsW" secondAttribute="top" constant="45" id="qFI-IN-K2C"/>
                                     <constraint firstAttribute="trailing" secondItem="6Wk-nx-BRE" secondAttribute="trailing" id="uF3-Mv-Orw"/>
                                 </constraints>
                             </view>
@@ -96,30 +129,30 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="9W0-57-Xxi" secondAttribute="bottom" id="5iI-eQ-PHV"/>
-                            <constraint firstItem="DFR-lh-lvE" firstAttribute="top" secondItem="boF-dt-NsK" secondAttribute="top" constant="50" id="D1w-qT-wBi">
+                            <constraint firstItem="DFR-lh-lvE" firstAttribute="top" secondItem="boF-dt-NsK" secondAttribute="top" constant="60" id="D1w-qT-wBi">
                                 <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                             </constraint>
                             <constraint firstItem="DFR-lh-lvE" firstAttribute="leading" secondItem="boF-dt-NsK" secondAttribute="leading" constant="10" id="KBW-Hv-5eG"/>
-                            <constraint firstItem="boF-dt-NsK" firstAttribute="bottom" secondItem="knG-vU-HsW" secondAttribute="bottom" constant="50" id="KLx-lU-NCb">
-                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                            <constraint firstAttribute="bottom" secondItem="knG-vU-HsW" secondAttribute="bottom" constant="55" id="KLx-lU-NCb">
+                                <variation key="heightClass=compact-widthClass=compact" constant="35"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="centerY" secondItem="uQ2-ck-zJM" secondAttribute="centerY" id="LAk-Ad-qiG"/>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="centerX" secondItem="uQ2-ck-zJM" secondAttribute="centerX" id="MVC-XA-Ves"/>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="leading" secondItem="uQ2-ck-zJM" secondAttribute="leading" id="Qfw-Fp-rQy"/>
-                            <constraint firstItem="knG-vU-HsW" firstAttribute="top" secondItem="boF-dt-NsK" secondAttribute="top" constant="50" id="SoU-BL-21X">
-                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                            <constraint firstItem="knG-vU-HsW" firstAttribute="top" secondItem="uQ2-ck-zJM" secondAttribute="top" constant="55" id="SoU-BL-21X">
+                                <variation key="heightClass=compact-widthClass=compact" constant="35"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
-                            <constraint firstItem="fIR-eF-ao2" firstAttribute="leading" secondItem="DFR-lh-lvE" secondAttribute="trailing" constant="10" id="Ubf-QT-twC"/>
+                            <constraint firstItem="fIR-eF-ao2" firstAttribute="leading" secondItem="DFR-lh-lvE" secondAttribute="trailing" constant="150" id="Ubf-QT-twC"/>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="top" secondItem="uQ2-ck-zJM" secondAttribute="top" id="Wiu-EJ-aEK"/>
                             <constraint firstItem="fIR-eF-ao2" firstAttribute="centerX" secondItem="uQ2-ck-zJM" secondAttribute="centerX" id="ZuR-Fh-Tre"/>
-                            <constraint firstItem="boF-dt-NsK" firstAttribute="trailing" secondItem="knG-vU-HsW" secondAttribute="trailing" constant="10" id="iEs-Rc-OeJ"/>
+                            <constraint firstAttribute="trailing" secondItem="knG-vU-HsW" secondAttribute="trailing" constant="50" id="iEs-Rc-OeJ"/>
                             <constraint firstItem="fIR-eF-ao2" firstAttribute="centerY" secondItem="uQ2-ck-zJM" secondAttribute="centerY" id="jj9-cd-XeF"/>
-                            <constraint firstItem="boF-dt-NsK" firstAttribute="bottom" secondItem="DFR-lh-lvE" secondAttribute="bottom" constant="50" id="pae-oB-iEP">
+                            <constraint firstItem="knG-vU-HsW" firstAttribute="leading" secondItem="DFR-lh-lvE" secondAttribute="trailing" constant="30" id="ktu-BW-KYZ"/>
+                            <constraint firstItem="boF-dt-NsK" firstAttribute="bottom" secondItem="DFR-lh-lvE" secondAttribute="bottom" constant="60" id="pae-oB-iEP">
                                 <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                             </constraint>
-                            <constraint firstItem="knG-vU-HsW" firstAttribute="leading" secondItem="fIR-eF-ao2" secondAttribute="trailing" id="viq-4x-beK"/>
                             <constraint firstAttribute="trailing" secondItem="9W0-57-Xxi" secondAttribute="trailing" id="zgz-Vx-fwg"/>
                         </constraints>
                     </view>
@@ -138,8 +171,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Espaco" width="5262" height="3720"/>
-        <image name="Quadro" width="1675" height="1425"/>
+        <image name="Board" width="1675" height="1425"/>
+        <image name="Earth" width="1772" height="1772"/>
+        <image name="Space" width="5262" height="3720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

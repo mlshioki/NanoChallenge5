@@ -29,6 +29,5 @@ class DetailedScreenMoonViewController: UIViewController {
         gravity.text = "Gravity: \(data.gravity ?? 0)"
         discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
         alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
-        
     }
 }
