@@ -175,7 +175,7 @@
                     </view>
                     <connections>
                         <outlet property="moonsCV" destination="npA-wY-BOI" id="6IR-33-vcH"/>
-                        <segue destination="i8x-Q5-WiN" kind="show" id="628-ay-cDq"/>
+                        <segue destination="i8x-Q5-WiN" kind="show" identifier="MoonViewSegueIdentifier" id="628-ay-cDq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K96-tR-PlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

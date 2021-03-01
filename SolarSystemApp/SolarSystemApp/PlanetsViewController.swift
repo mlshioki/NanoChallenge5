@@ -39,10 +39,10 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = UICollectionViewCell()
-        if let Mooncell = moonsCV.dequeueReusableCell(withReuseIdentifier:"moonCell", for: indexPath) as? MoonsCollectionViewCell{
-            Mooncell.configure(with: moonsList[indexPath.item])
+        if let MoonCell = moonsCV.dequeueReusableCell(withReuseIdentifier:"moonCell", for: indexPath) as? MoonsCollectionViewCell{
+            MoonCell.configure(with: moonsList[indexPath.item])
             
-            cell = Mooncell
+            cell = MoonCell
         }
         return cell
     }
