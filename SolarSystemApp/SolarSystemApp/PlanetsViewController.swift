@@ -19,7 +19,6 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBOutlet var gravity: UILabel!
     @IBOutlet var discoveryDate: UILabel!
     @IBOutlet var alternativeName: UILabel!
-    @IBOutlet var moonsCollection: UICollectionView!
     
     var moonsList: [Moon] = []
     let moonIdentifier = "MoonViewSegueIdentifier"

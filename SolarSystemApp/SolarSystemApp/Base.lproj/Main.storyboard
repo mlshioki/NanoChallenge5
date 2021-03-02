@@ -131,11 +131,22 @@
                         <outlet property="thisView" destination="JCn-xt-2gV" id="pqa-bD-IHx"/>
                         <outlet property="uranus" destination="wZ7-YK-RG4" id="HBQ-Fs-Uw2"/>
                         <outlet property="venus" destination="5Xl-OF-x5w" id="yqA-6U-syn"/>
+                        <segue destination="xjl-0b-bGf" kind="show" identifier="goToPlanetsView" id="brG-he-46x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
+            <point key="canvasLocation" x="116" y="80"/>
+        </scene>
+        <!--PlanetsView-->
+        <scene sceneID="5ft-VF-WWn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlanetsView" id="xjl-0b-bGf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jR5-nC-2kn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMW-x1-cxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="33"/>
         </scene>
     </scenes>
     <resources>

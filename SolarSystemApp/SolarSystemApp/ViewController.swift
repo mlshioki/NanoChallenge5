@@ -36,31 +36,31 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
     }
     @IBAction func SunBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Sun", sender: sender)
+        OpenDetailPlanet(planet: "Sun")
     }
     @IBAction func MercuryBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Mercury", sender: sender)
+        OpenDetailPlanet(planet: "Mercury")
     }
     @IBAction func VenusBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Venus", sender: sender)
+        OpenDetailPlanet(planet: "Venus")
     }
     @IBAction func EarthBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Earth", sender: sender)
+        OpenDetailPlanet(planet: "Earth")
     }
     @IBAction func MarsBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Mars", sender: sender)
+        OpenDetailPlanet(planet: "Mars")
     }
     @IBAction func JupiterBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Jupiter", sender: sender)
+        OpenDetailPlanet(planet: "Jupiter")
     }
     @IBAction func SaturnBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Saturn", sender: sender)
+        OpenDetailPlanet(planet: "Saturn")
     }
     @IBAction func UranusBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Uranus", sender: sender)
+        OpenDetailPlanet(planet: "Uranus")
     }
     @IBAction func NeptuneBtn(_ sender: Any) {
-        OpenDetailPlanet(planet: "Neptune", sender: sender)
+        OpenDetailPlanet(planet: "Neptune")
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,11 +72,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return thisView
     }
     
-    func OpenDetailPlanet(planet: String, sender: Any?){
-        print("Botão apertado")
-        change = PlanetsScreen()
-        change.changeToPlanetsDetail(id: planet, sender: sender)//não funciona para mandar infos para outra tela
-        performSegue(withIdentifier: "goToPlanetsView", sender: sender)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if let vc = segue.destination as? PlanetsScreen{
+            vc.id = sender as! String
+        }
+    }
+    
+    func OpenDetailPlanet(planet: String){
+        performSegue(withIdentifier: "goToPlanetsView", sender: planet)
     }
     
     func setCornerRadius(){
