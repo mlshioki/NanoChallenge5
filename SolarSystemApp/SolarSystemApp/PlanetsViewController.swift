@@ -41,6 +41,10 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
         
     }
     
+    @IBAction func backBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let moon = sender as! Moon
         if let vc = segue.destination as? DetailedScreenMoonViewController{
