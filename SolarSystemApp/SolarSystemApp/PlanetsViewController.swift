@@ -6,16 +6,10 @@
 //
 
 import UIKit
-
-class PlanetsScreen: UIViewController, changePlanetsScreen{
+            
+class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func changeToPlanetsDetail(id: String, sender: Any?) {
-        self.id = id
-//        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "goToPlanetsView") as! PlanetsScreen
-//        self.navigationController?.pushViewController(secondViewController, animated: true)
-        
-    }
-    
+    @IBOutlet weak var moonsCV: UICollectionView!
     
     var id: String = ""
     
@@ -26,6 +20,9 @@ class PlanetsScreen: UIViewController, changePlanetsScreen{
     @IBOutlet var discoveryDate: UILabel!
     @IBOutlet var alternativeName: UILabel!
     @IBOutlet var moonsCollection: UICollectionView!
+    
+    var moonsList: [Moon] = []
+    let moonIdentifier = "MoonViewSegueIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +35,36 @@ class PlanetsScreen: UIViewController, changePlanetsScreen{
         gravity.text = "Gravity: \(data.gravity ?? 0)"
         discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
         alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
+        
+        moonsCV.delegate = self
+        moonsCV.dataSource = self
+        moonsList = data.moons ?? []
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let moon = sender as! Moon
+        if let vc = segue.destination as? DetailedScreenMoonViewController{
+            vc.id = moon.moon!
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return moonsList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var cell = UICollectionViewCell()
+        if let MoonCell = moonsCV.dequeueReusableCell(withReuseIdentifier:"moonCell", for: indexPath) as? MoonsCollectionViewCell{
+            MoonCell.configure(with: moonsList[indexPath.item])
+            
+            cell = MoonCell
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let moon = moonsList[indexPath.item]
+        performSegue(withIdentifier: moonIdentifier, sender: moon)
     }
 }
