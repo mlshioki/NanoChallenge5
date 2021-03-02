@@ -37,4 +37,8 @@ class DetailedScreenMoonViewController: UIViewController {
         discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
         alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

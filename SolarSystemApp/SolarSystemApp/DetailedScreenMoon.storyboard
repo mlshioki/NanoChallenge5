@@ -124,6 +124,25 @@
                                     <constraint firstAttribute="trailing" secondItem="6Wk-nx-BRE" secondAttribute="trailing" id="uF3-Mv-Orw"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhS-oM-EXE" userLabel="backBtn">
+                                <rect key="frame" x="31.999999999999996" y="32" width="54.666666666666657" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                                <font key="NSOriginalFont" size="18" name="SFProRounded-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn:" destination="x4z-Kk-Azd" eventType="touchUpInside" id="L2H-dg-b0B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="boF-dt-NsK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,8 +164,10 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="fIR-eF-ao2" firstAttribute="leading" secondItem="DFR-lh-lvE" secondAttribute="trailing" constant="150" id="Ubf-QT-twC"/>
+                            <constraint firstItem="PhS-oM-EXE" firstAttribute="leading" secondItem="uQ2-ck-zJM" secondAttribute="leading" constant="32" id="Vqq-0w-btR"/>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="top" secondItem="uQ2-ck-zJM" secondAttribute="top" id="Wiu-EJ-aEK"/>
                             <constraint firstItem="fIR-eF-ao2" firstAttribute="centerX" secondItem="uQ2-ck-zJM" secondAttribute="centerX" id="ZuR-Fh-Tre"/>
+                            <constraint firstItem="PhS-oM-EXE" firstAttribute="top" secondItem="boF-dt-NsK" secondAttribute="top" constant="32" id="bgs-xk-PCd"/>
                             <constraint firstAttribute="trailing" secondItem="knG-vU-HsW" secondAttribute="trailing" constant="50" id="iEs-Rc-OeJ"/>
                             <constraint firstItem="fIR-eF-ao2" firstAttribute="centerY" secondItem="uQ2-ck-zJM" secondAttribute="centerY" id="jj9-cd-XeF"/>
                             <constraint firstItem="knG-vU-HsW" firstAttribute="leading" secondItem="DFR-lh-lvE" secondAttribute="trailing" constant="30" id="ktu-BW-KYZ"/>
@@ -174,6 +195,7 @@
         <image name="Board" width="1772" height="1495"/>
         <image name="Earth" width="1772" height="1772"/>
         <image name="Space" width="5262" height="3720"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

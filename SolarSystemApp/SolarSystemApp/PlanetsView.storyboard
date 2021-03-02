@@ -207,16 +207,36 @@
                                     <constraint firstItem="Oe4-It-Sh0" firstAttribute="top" secondItem="Mnn-ge-hLC" secondAttribute="top" constant="45" id="vof-jD-TeV"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-tb-afc" userLabel="backBtn">
+                                <rect key="frame" x="32" y="32" width="54.5" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn:" destination="pZq-bR-Trt" eventType="touchUpInside" id="pTQ-9B-ql8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YOn-W4-TVy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fHg-n2-mwI" firstAttribute="leading" secondItem="YOn-W4-TVy" secondAttribute="leading" constant="10" id="BaR-iW-jUg"/>
                             <constraint firstItem="YOn-W4-TVy" firstAttribute="bottom" secondItem="fHg-n2-mwI" secondAttribute="bottom" constant="60" id="KHz-yJ-0cf"/>
+                            <constraint firstItem="vgg-tb-afc" firstAttribute="leading" secondItem="85D-KC-byE" secondAttribute="leading" constant="32" id="O4o-pt-21y"/>
                             <constraint firstItem="Mnn-ge-hLC" firstAttribute="top" secondItem="85D-KC-byE" secondAttribute="top" constant="69" id="UDc-yz-yMf"/>
                             <constraint firstItem="aXc-TB-4ly" firstAttribute="centerX" secondItem="85D-KC-byE" secondAttribute="centerX" id="XRd-Ey-DNt"/>
                             <constraint firstItem="aXc-TB-4ly" firstAttribute="leading" secondItem="fHg-n2-mwI" secondAttribute="trailing" constant="150" id="dxg-9X-nv3"/>
                             <constraint firstAttribute="bottom" secondItem="Mnn-ge-hLC" secondAttribute="bottom" constant="55" id="esF-xZ-QZ3"/>
+                            <constraint firstItem="vgg-tb-afc" firstAttribute="top" secondItem="YOn-W4-TVy" secondAttribute="top" constant="32" id="hI4-5s-WFn"/>
                             <constraint firstAttribute="trailing" secondItem="Mnn-ge-hLC" secondAttribute="trailing" constant="50" id="iDf-fD-12u"/>
                             <constraint firstItem="Mnn-ge-hLC" firstAttribute="leading" secondItem="fHg-n2-mwI" secondAttribute="trailing" constant="30" id="nHx-AH-D1I"/>
                             <constraint firstItem="aXc-TB-4ly" firstAttribute="centerY" secondItem="85D-KC-byE" secondAttribute="centerY" id="oZj-nq-Bge"/>
@@ -254,6 +274,7 @@
         <image name="Earth" width="1772" height="1772"/>
         <image name="Moon" width="1772" height="1772"/>
         <image name="Space" width="5262" height="3720"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
