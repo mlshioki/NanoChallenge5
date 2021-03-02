@@ -26,7 +26,7 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let data = getData(from: id)
+        let data = getData(from: id, fullUrl: false)
         
         planetImage.image = UIImage(named: id)
         planetName.text = "\(data.englishName ?? "???")"
@@ -44,7 +44,7 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let moon = sender as! Moon
         if let vc = segue.destination as? DetailedScreenMoonViewController{
-            vc.id = moon.moon!
+            vc.id = moon.rel!
         }
     }
     

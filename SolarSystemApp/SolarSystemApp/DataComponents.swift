@@ -27,9 +27,17 @@ struct Moon: Codable {
 
 //usar a func abaixo quando for delegar para outra classe
 
-func getData(from body: String) -> Body{
+func getData(from body: String, fullUrl: Bool) -> Body{
     var res: Body!
-    let url = "https://api.le-systeme-solaire.net/rest/bodies/\(body)"
+    
+    var url: String
+    
+    if (fullUrl == false) {
+        url = "https://api.le-systeme-solaire.net/rest/bodies/\(body)"
+    } else {
+        url = body
+    }
+    
     let group = DispatchGroup()
     group.enter()
     URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
