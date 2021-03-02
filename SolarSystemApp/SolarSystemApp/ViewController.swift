@@ -22,6 +22,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var uranus: UIButton!
     @IBOutlet weak var neptune: UIButton!
     
+    var change: changePlanetsScreen!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +35,34 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             setCornerRadius()
         
     }
-
+    @IBAction func SunBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Sun", sender: sender)
+    }
+    @IBAction func MercuryBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Mercury", sender: sender)
+    }
+    @IBAction func VenusBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Venus", sender: sender)
+    }
+    @IBAction func EarthBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Earth", sender: sender)
+    }
+    @IBAction func MarsBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Mars", sender: sender)
+    }
+    @IBAction func JupiterBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Jupiter", sender: sender)
+    }
+    @IBAction func SaturnBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Saturn", sender: sender)
+    }
+    @IBAction func UranusBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Uranus", sender: sender)
+    }
+    @IBAction func NeptuneBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Neptune", sender: sender)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -41,6 +70,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
 
         return thisView
+    }
+    
+    func OpenDetailPlanet(planet: String, sender: Any?){
+        print("Botão apertado")
+        change = PlanetsScreen()
+        change.changeToPlanetsDetail(id: planet, sender: sender)//não funciona para mandar infos para outra tela
+        performSegue(withIdentifier: "goToPlanetsView", sender: sender)
     }
     
     func setCornerRadius(){
@@ -55,5 +91,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         neptune.layer.cornerRadius = 100.0
     }
 
+}
+
+protocol changePlanetsScreen {
+    func changeToPlanetsDetail(id: String, sender: Any?)
 }
 
