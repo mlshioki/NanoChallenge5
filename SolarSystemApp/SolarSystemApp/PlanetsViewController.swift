@@ -19,6 +19,8 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBOutlet var gravity: UILabel!
     @IBOutlet var discoveryDate: UILabel!
     @IBOutlet var alternativeName: UILabel!
+    @IBOutlet var boardView: UIView!
+    @IBOutlet var stackView1: UIStackView!
     
     var moonsList: [Moon] = []
     let moonIdentifier = "MoonViewSegueIdentifier"
@@ -39,6 +41,12 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
         moonsCV.dataSource = self
         moonsList = data.moons ?? []
         
+        stackView1.isAccessibilityElement = true
+        stackView1.accessibilityLabel = "\(planetName.text!), \(size.text!), \(gravity.text!), \(discoveryDate.text!), \(alternativeName.text!)"
+        stackView1.accessibilityHint = "Select a moon down below to see the details of it"
+        
+        planetImage.isAccessibilityElement = true
+        planetImage.accessibilityLabel = "Image of \(planetName.text!)"
     }
     
     @IBAction func backBtn(_ sender: Any) {
