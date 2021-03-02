@@ -14,8 +14,11 @@ class MoonsCollectionViewCell: UICollectionViewCell {
     
     
     func configure(with moon: Moon){
+        
+        let data = getData(from: moon.rel!, fullUrl: true)
+        
         moonImg.image = UIImage(named: moon.moon!)
-        moonName.text = moon.moon
+        moonName.text = data.englishName
         
         if((moonImg.image) == nil){
             moonImg.image = UIImage(named: "Moon")

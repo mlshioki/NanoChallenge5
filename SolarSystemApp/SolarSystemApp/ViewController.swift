@@ -22,6 +22,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var uranus: UIButton!
     @IBOutlet weak var neptune: UIButton!
     
+    var change: changePlanetsScreen!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +35,34 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             setCornerRadius()
         
     }
-
+    @IBAction func SunBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Sun")
+    }
+    @IBAction func MercuryBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Mercury")
+    }
+    @IBAction func VenusBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Venus")
+    }
+    @IBAction func EarthBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Earth")
+    }
+    @IBAction func MarsBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Mars")
+    }
+    @IBAction func JupiterBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Jupiter")
+    }
+    @IBAction func SaturnBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Saturn")
+    }
+    @IBAction func UranusBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Uranus")
+    }
+    @IBAction func NeptuneBtn(_ sender: Any) {
+        OpenDetailPlanet(planet: "Neptune")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -41,6 +70,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
 
         return thisView
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if let vc = segue.destination as? PlanetsScreen{
+            vc.id = sender as! String
+        }
+    }
+    
+    func OpenDetailPlanet(planet: String){
+        performSegue(withIdentifier: "goToPlanetsView", sender: planet)
     }
     
     func setCornerRadius(){
@@ -55,5 +94,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         neptune.layer.cornerRadius = 100.0
     }
 
+}
+
+protocol changePlanetsScreen {
+    func changeToPlanetsDetail(id: String, sender: Any?)
 }
 

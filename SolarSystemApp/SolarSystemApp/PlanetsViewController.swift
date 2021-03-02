@@ -6,22 +6,37 @@
 //
 
 import UIKit
-
+            
 class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var moonsCV: UICollectionView!
     
-    var id: String = "Saturn"
+    var id: String = ""
+    
+    @IBOutlet var planetImage: UIImageView!
+    @IBOutlet var planetName: UILabel!
+    @IBOutlet var size: UILabel!
+    @IBOutlet var gravity: UILabel!
+    @IBOutlet var discoveryDate: UILabel!
+    @IBOutlet var alternativeName: UILabel!
+    
     var moonsList: [Moon] = []
     let moonIdentifier = "MoonViewSegueIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let data = getData(from: id, fullUrl: false)
+        
+        planetImage.image = UIImage(named: id)
+        planetName.text = "\(data.englishName ?? "???")"
+        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0)"
+        gravity.text = "Gravity: \(data.gravity ?? 0)"
+        discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
+        alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
+        
         moonsCV.delegate = self
         moonsCV.dataSource = self
-        
-        let data = getData(from: id)
         moonsList = data.moons ?? []
         
     }
@@ -29,7 +44,7 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let moon = sender as! Moon
         if let vc = segue.destination as? DetailedScreenMoonViewController{
-            vc.id = moon.moon!
+            vc.id = moon.rel!
         }
     }
     
