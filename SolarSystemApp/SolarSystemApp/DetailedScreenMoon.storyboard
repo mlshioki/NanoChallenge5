@@ -29,6 +29,10 @@
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth" translatesAutoresizingMaskIntoConstraints="NO" id="DFR-lh-lvE">
                                 <rect key="frame" x="54" y="60" width="244" height="273"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knG-vU-HsW" userLabel="Board View">
                                 <rect key="frame" x="328" y="55" width="518" height="304"/>
@@ -54,27 +58,27 @@
                                                 </attributedString>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-v1-PNz">
-                                                <rect key="frame" x="0.0" y="45.666666666666657" width="427" height="31"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Label">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="18" name="SFCompactRounded-Regular"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A40-yy-7gM">
-                                                <rect key="frame" x="0.0" y="91.666666666666657" width="427" height="30.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="45.666666666666657" width="427" height="31"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
                                                             <color key="NSColor" red="0.97668689489364624" green="0.99197584390640259" blue="0.97628039121627808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-v1-PNz">
+                                                <rect key="frame" x="0.0" y="91.666666666666657" width="427" height="30.666666666666671"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="18" name="SFCompactRounded-Regular"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -184,6 +188,7 @@
                         <outlet property="moonImage" destination="DFR-lh-lvE" id="bPT-Sb-qKl"/>
                         <outlet property="moonName" destination="lHu-DA-Ec7" id="BDR-Iw-Lu7"/>
                         <outlet property="size" destination="A40-yy-7gM" id="2Hf-Nc-28Y"/>
+                        <outlet property="stackView" destination="TfP-eP-RAr" id="RVb-d1-aDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMT-4u-yqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -17,8 +17,12 @@ class MoonsCollectionViewCell: UICollectionViewCell {
         
         let data = getData(from: moon.rel!, fullUrl: true)
         
-        moonImg.image = UIImage(named: moon.moon!)
+        moonImg.image = UIImage(named: data.englishName!)
         moonName.text = data.englishName
+        
+        moonImg.isAccessibilityElement = true
+        moonImg.accessibilityLabel = "\(moonName.text!)"
+        moonImg.accessibilityHint = "Double tap to open the details of this moon"
         
         if((moonImg.image) == nil){
             moonImg.image = UIImage(named: "Moon")
