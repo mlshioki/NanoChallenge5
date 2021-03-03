@@ -97,12 +97,24 @@
                                                     <action selector="NeptuneBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfL-WY-pCg"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdr-Mc-uCQ">
+                                                <rect key="frame" x="809" y="353" width="47" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Help!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="helpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jX5-uc-YA6"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Nz0-Ef-eeL" secondAttribute="bottom" id="2fa-yt-OmL"/>
+                                            <constraint firstAttribute="bottom" secondItem="pdr-Mc-uCQ" secondAttribute="bottom" constant="25" id="FSA-PK-0TH"/>
                                             <constraint firstItem="Nz0-Ef-eeL" firstAttribute="leading" secondItem="JCn-xt-2gV" secondAttribute="leading" id="HD1-1H-Paq"/>
                                             <constraint firstAttribute="trailing" secondItem="Nz0-Ef-eeL" secondAttribute="trailing" id="ajb-aa-uph"/>
+                                            <constraint firstAttribute="trailing" secondItem="pdr-Mc-uCQ" secondAttribute="trailing" constant="40" id="sNK-TA-UDV"/>
                                             <constraint firstItem="Nz0-Ef-eeL" firstAttribute="top" secondItem="JCn-xt-2gV" secondAttribute="top" id="uVV-1e-m3c"/>
                                         </constraints>
                                     </view>
@@ -129,11 +141,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blurView" destination="zCS-s1-MvE" id="dm8-lj-nLj"/>
                         <outlet property="earth" destination="iGE-vg-jo8" id="CMF-lu-lrq"/>
                         <outlet property="jupiter" destination="jtP-gf-2Xu" id="qfD-f4-5uA"/>
                         <outlet property="mars" destination="tbl-VV-XYm" id="8l4-Xi-uEz"/>
                         <outlet property="mercury" destination="zqQ-fZ-AZg" id="Rpa-Oz-YBj"/>
                         <outlet property="neptune" destination="uNQ-Mb-peZ" id="xI7-HA-mPX"/>
+                        <outlet property="okBtn" destination="pYW-dD-Gjo" id="leo-qy-7ow"/>
+                        <outlet property="popUpView" destination="BRh-XE-sYf" id="Rkl-By-zrx"/>
                         <outlet property="saturn" destination="ag5-Kl-1xk" id="UEu-KC-KXS"/>
                         <outlet property="scrollView" destination="XN1-3R-9sV" id="EEW-rk-w0z"/>
                         <outlet property="sun" destination="628-m6-nLh" id="EKv-IW-C2d"/>
@@ -144,6 +159,49 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="zCS-s1-MvE">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="064-i5-mcv">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" id="BRh-XE-sYf">
+                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="ZWJ-lp-Gbp">
+                            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        </imageView>
+                        <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-dD-Gjo">
+                            <rect key="frame" x="379.5" y="310" width="137" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="137" id="vj1-Hs-avx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="tintColor" red="0.15970590709999999" green="0.19491019849999999" blue="0.40786337849999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Ok, let's go!">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="okBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eIz-Jr-t6U"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="bvl-j7-SWA"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="bvl-j7-SWA" firstAttribute="bottom" secondItem="pYW-dD-Gjo" secondAttribute="bottom" constant="48" id="5mj-RY-B82"/>
+                        <constraint firstItem="ZWJ-lp-Gbp" firstAttribute="leading" secondItem="BRh-XE-sYf" secondAttribute="leading" id="Zdd-rE-tge"/>
+                        <constraint firstAttribute="bottom" secondItem="ZWJ-lp-Gbp" secondAttribute="bottom" id="b8n-hg-UI3"/>
+                        <constraint firstItem="pYW-dD-Gjo" firstAttribute="centerX" secondItem="BRh-XE-sYf" secondAttribute="centerX" id="c8m-Ae-INx"/>
+                        <constraint firstItem="ZWJ-lp-Gbp" firstAttribute="top" secondItem="bvl-j7-SWA" secondAttribute="top" id="rsk-9j-RAV"/>
+                        <constraint firstAttribute="trailing" secondItem="ZWJ-lp-Gbp" secondAttribute="trailing" id="y4E-MT-qyQ"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="116" y="80"/>
         </scene>
@@ -160,6 +218,7 @@
     </scenes>
     <resources>
         <image name="Sistema solar" width="5262" height="3720"/>
+        <image name="Tutorial" width="7308" height="3375"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
