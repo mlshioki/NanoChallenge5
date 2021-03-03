@@ -22,6 +22,22 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var uranus: UIButton!
     @IBOutlet weak var neptune: UIButton!
     
+    @IBOutlet var popUpView: UIView!
+    @IBOutlet var blurView: UIVisualEffectView!
+    
+    @IBAction func helpBtn(_ sender: Any) {
+        animateIn(x: blurView)
+        animateIn(x: popUpView)
+    }
+    
+    @IBOutlet weak var okBtn: UIButton!
+    @IBAction func okBtn(_ sender: Any) {
+        animateOut(x: popUpView)
+        animateOut(x: blurView)
+        UserDefaultManager.shared.storeValue(forKey: .alreadyOpened, value: true)
+
+    }
+    
     var change: changePlanetsScreen!
     
     override func viewDidLoad() {
@@ -33,6 +49,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             scrollView.zoomScale = 1.0
         
             setCornerRadius()
+        
+        blurView.bounds = self.view.bounds
+        popUpView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        
+        okBtn.layer.cornerRadius = 10
+        
+        if !(UserDefaultManager.shared.getIsFirstTime(forKey: .alreadyOpened)) {
+            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) {_ in
+                self.helpBtn(self)
+            }
+        }
         
     }
     @IBAction func SunBtn(_ sender: Any) {
@@ -94,7 +121,36 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         neptune.layer.cornerRadius = 100.0
     }
 
+    //function to create the animation when the popUp appears
+    func animateIn(x: UIView){
+        let backgroundView = self.view!
+        
+        backgroundView.addSubview(x)
+        
+        x.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        x.alpha = 0
+        x.center = backgroundView.center
+        
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            x.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            x.alpha = 1
+        })
+    }
+    
+    //function to create the animation when the popUp disappears
+    func animateOut(x: UIView){
+        UIView.animate(withDuration: 0.4, animations: {
+            x.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            x.alpha = 0
+        }, completion: { _ in
+            x.removeFromSuperview()
+        })
+    }
 }
+
+
+
 
 protocol changePlanetsScreen {
     func changeToPlanetsDetail(id: String, sender: Any?)
