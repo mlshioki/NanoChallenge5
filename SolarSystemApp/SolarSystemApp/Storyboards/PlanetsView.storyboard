@@ -44,31 +44,31 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="t8A-jc-jFY">
                                         <rect key="frame" x="0.0" y="0.0" width="523" height="290"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oe4-It-Sh0" userLabel="stack">
-                                        <rect key="frame" x="50" y="45" width="448" height="200"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Oe4-It-Sh0" userLabel="stack">
+                                        <rect key="frame" x="50" y="35" width="448" height="220"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AQA-Ys-mls">
-                                                <rect key="frame" x="0.0" y="0.0" width="448" height="133"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od7-S6-C02">
+                                                <rect key="frame" x="0.0" y="0.0" width="448" height="30.5"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Planet">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="26" name="Kalam-Bold"/>
+                                                            <font key="NSOriginalFont" size="22" name="SFProRounded-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AQA-Ys-mls">
+                                                <rect key="frame" x="0.0" y="42.5" width="448" height="98.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od7-S6-C02">
-                                                        <rect key="frame" x="0.0" y="0.0" width="448" height="26.5"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <bool key="isElement" value="NO"/>
-                                                        </accessibility>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Planet">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="22" name="SFProRounded-Bold"/>
-                                                                    <font key="NSOriginalFont" size="22" name="SFProRounded-Bold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-Mc-3PJ">
-                                                        <rect key="frame" x="0.0" y="26.5" width="448" height="26.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="448" height="21"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <bool key="isElement" value="NO"/>
@@ -85,7 +85,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkV-uE-Ml1">
-                                                        <rect key="frame" x="0.0" y="53" width="448" height="27"/>
+                                                        <rect key="frame" x="0.0" y="39" width="448" height="21"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <bool key="isElement" value="NO"/>
                                                         </accessibility>
@@ -102,7 +102,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-az-l9m">
-                                                        <rect key="frame" x="0.0" y="80" width="448" height="26.5"/>
+                                                        <rect key="frame" x="0.0" y="77.5" width="448" height="21"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <bool key="isElement" value="NO"/>
                                                         </accessibility>
@@ -117,26 +117,10 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJx-2p-5q6">
-                                                        <rect key="frame" x="0.0" y="106.5" width="448" height="26.5"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <bool key="isElement" value="NO"/>
-                                                        </accessibility>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Label">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="18" name="SFProRounded-Regular"/>
-                                                                    <font key="NSOriginalFont" size="18" name="SFProRounded-Regular"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-7h-MDx">
-                                                <rect key="frame" x="0.0" y="133" width="448" height="67"/>
+                                                <rect key="frame" x="0.0" y="153" width="448" height="67"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-BS-1be">
                                                         <rect key="frame" x="0.0" y="0.0" width="75" height="67"/>
@@ -217,11 +201,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="CHY-7h-MDx" firstAttribute="top" secondItem="AQA-Ys-mls" secondAttribute="bottom" id="5oG-ZZ-WaG"/>
-                                            <constraint firstItem="CHY-7h-MDx" firstAttribute="top" secondItem="Oe4-It-Sh0" secondAttribute="top" constant="133" id="N0o-B1-pJp"/>
-                                            <constraint firstItem="AQA-Ys-mls" firstAttribute="top" secondItem="Oe4-It-Sh0" secondAttribute="top" id="sMK-RS-uuc"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -231,8 +210,8 @@
                                     <constraint firstItem="t8A-jc-jFY" firstAttribute="leading" secondItem="Mnn-ge-hLC" secondAttribute="leading" id="WuR-a1-n66"/>
                                     <constraint firstItem="t8A-jc-jFY" firstAttribute="top" secondItem="Mnn-ge-hLC" secondAttribute="top" id="ZVx-AK-LVh"/>
                                     <constraint firstItem="Oe4-It-Sh0" firstAttribute="leading" secondItem="Mnn-ge-hLC" secondAttribute="leading" constant="50" id="bvP-6z-d65"/>
-                                    <constraint firstAttribute="bottom" secondItem="Oe4-It-Sh0" secondAttribute="bottom" constant="45" id="pII-HM-gn0"/>
-                                    <constraint firstItem="Oe4-It-Sh0" firstAttribute="top" secondItem="Mnn-ge-hLC" secondAttribute="top" constant="45" id="vof-jD-TeV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oe4-It-Sh0" secondAttribute="bottom" constant="35" id="pII-HM-gn0"/>
+                                    <constraint firstItem="Oe4-It-Sh0" firstAttribute="top" secondItem="Mnn-ge-hLC" secondAttribute="top" constant="35" id="vof-jD-TeV"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-tb-afc" userLabel="backBtn">
@@ -272,7 +251,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alternativeName" destination="CJx-2p-5q6" id="dtI-jP-kOO"/>
                         <outlet property="boardView" destination="Mnn-ge-hLC" id="Gwh-Y9-E4o"/>
                         <outlet property="discoveryDate" destination="CbK-az-l9m" id="qwu-Kt-20b"/>
                         <outlet property="gravity" destination="kkV-uE-Ml1" id="dPA-mP-rUe"/>

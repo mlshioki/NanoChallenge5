@@ -11,6 +11,9 @@
 		9764C06F25ED862C0039CD62 /* Moons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9764C06E25ED862C0039CD62 /* Moons.swift */; };
 		97961A7625E8190C008C534F /* PlanetsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97961A7525E8190C008C534F /* PlanetsView.storyboard */; };
 		97961A7B25E81923008C534F /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97961A7A25E81923008C534F /* PlanetsViewController.swift */; };
+		BD22E63925F04287007F5654 /* Kalam-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC2D77225F03ED000180E59 /* Kalam-Regular.ttf */; };
+		BD22E63A25F04287007F5654 /* Kalam-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC2D77125F03ED000180E59 /* Kalam-Light.ttf */; };
+		BD22E63B25F04287007F5654 /* Kalam-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC2D77025F03ED000180E59 /* Kalam-Bold.ttf */; };
 		BD791FD925E43CE700F066CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FD825E43CE700F066CE /* AppDelegate.swift */; };
 		BD791FDB25E43CE700F066CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FDA25E43CE700F066CE /* SceneDelegate.swift */; };
 		BD791FDD25E43CE700F066CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FDC25E43CE700F066CE /* ViewController.swift */; };
@@ -60,6 +63,9 @@
 		BD791FF625E43CE800F066CE /* SolarSystemAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarSystemAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD791FFA25E43CE800F066CE /* SolarSystemAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemAppUITests.swift; sourceTree = "<group>"; };
 		BD791FFC25E43CE800F066CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDC2D77025F03ED000180E59 /* Kalam-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Bold.ttf"; sourceTree = "<group>"; };
+		BDC2D77125F03ED000180E59 /* Kalam-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Light.ttf"; sourceTree = "<group>"; };
+		BDC2D77225F03ED000180E59 /* Kalam-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Regular.ttf"; sourceTree = "<group>"; };
 		BDD1534425E4ED8200DD2A4D /* DataComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataComponents.swift; sourceTree = "<group>"; };
 		BDD1535A25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedScreenMoon.storyboard; sourceTree = "<group>"; };
 		BDD1535F25E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedScreenMoonViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			children = (
 				97D6138B25EFFFD8009741CF /* Storyboards */,
 				97D6138C25EFFFF2009741CF /* ViewControllers */,
+				BDC2D76F25F03EB000180E59 /* Resources */,
 				BD791FD825E43CE700F066CE /* AppDelegate.swift */,
 				BD791FDA25E43CE700F066CE /* SceneDelegate.swift */,
 				BD791FE125E43CE700F066CE /* Assets.xcassets */,
@@ -163,6 +170,16 @@
 				BD791FFC25E43CE800F066CE /* Info.plist */,
 			);
 			path = SolarSystemAppUITests;
+			sourceTree = "<group>";
+		};
+		BDC2D76F25F03EB000180E59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2D77025F03ED000180E59 /* Kalam-Bold.ttf */,
+				BDC2D77125F03ED000180E59 /* Kalam-Light.ttf */,
+				BDC2D77225F03ED000180E59 /* Kalam-Regular.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +285,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD22E63925F04287007F5654 /* Kalam-Regular.ttf in Resources */,
 				BDD1535B25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard in Resources */,
 				BD791FE525E43CE700F066CE /* LaunchScreen.storyboard in Resources */,
 				BD791FE225E43CE700F066CE /* Assets.xcassets in Resources */,
+				BD22E63A25F04287007F5654 /* Kalam-Light.ttf in Resources */,
 				BD791FE025E43CE700F066CE /* Main.storyboard in Resources */,
+				BD22E63B25F04287007F5654 /* Kalam-Bold.ttf in Resources */,
 				97961A7625E8190C008C534F /* PlanetsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

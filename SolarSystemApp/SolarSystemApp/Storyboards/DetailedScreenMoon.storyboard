@@ -49,8 +49,8 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="Terra">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="22" name="SFCompactRounded-Bold"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="26" name="Kalam-Bold"/>
                                                             <font key="NSOriginalFont" size="20" name="SFCompactRounded-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
