@@ -11,9 +11,6 @@
 		9764C06F25ED862C0039CD62 /* Moons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9764C06E25ED862C0039CD62 /* Moons.swift */; };
 		97961A7625E8190C008C534F /* PlanetsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97961A7525E8190C008C534F /* PlanetsView.storyboard */; };
 		97961A7B25E81923008C534F /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97961A7A25E81923008C534F /* PlanetsViewController.swift */; };
-		BD51AD3025F00D1F000F86C3 /* Kalam-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD51AD2F25F00CF9000F86C3 /* Kalam-Bold.ttf */; };
-		BD51AD3125F00D1F000F86C3 /* Kalam-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD51AD2D25F00CF9000F86C3 /* Kalam-Regular.ttf */; };
-		BD51AD3225F00D1F000F86C3 /* Kalam-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD51AD2E25F00CF9000F86C3 /* Kalam-Light.ttf */; };
 		BD791FD925E43CE700F066CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FD825E43CE700F066CE /* AppDelegate.swift */; };
 		BD791FDB25E43CE700F066CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FDA25E43CE700F066CE /* SceneDelegate.swift */; };
 		BD791FDD25E43CE700F066CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FDC25E43CE700F066CE /* ViewController.swift */; };
@@ -49,9 +46,6 @@
 		9764C06E25ED862C0039CD62 /* Moons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moons.swift; sourceTree = "<group>"; };
 		97961A7525E8190C008C534F /* PlanetsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlanetsView.storyboard; sourceTree = "<group>"; };
 		97961A7A25E81923008C534F /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
-		BD51AD2D25F00CF9000F86C3 /* Kalam-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Regular.ttf"; sourceTree = "<group>"; };
-		BD51AD2E25F00CF9000F86C3 /* Kalam-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Light.ttf"; sourceTree = "<group>"; };
-		BD51AD2F25F00CF9000F86C3 /* Kalam-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Bold.ttf"; sourceTree = "<group>"; };
 		BD791FD525E43CE700F066CE /* SolarSystemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarSystemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD791FD825E43CE700F066CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD791FDA25E43CE700F066CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,14 +111,6 @@
 				9764C06E25ED862C0039CD62 /* Moons.swift */,
 			);
 			path = ViewControllers;
-		BD51AD2C25F00CD8000F86C3 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				BD51AD2F25F00CF9000F86C3 /* Kalam-Bold.ttf */,
-				BD51AD2E25F00CF9000F86C3 /* Kalam-Light.ttf */,
-				BD51AD2D25F00CF9000F86C3 /* Kalam-Regular.ttf */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		BD791FCC25E43CE600F066CE = {
@@ -154,13 +140,6 @@
 				97D6138C25EFFFF2009741CF /* ViewControllers */,
 				BD791FD825E43CE700F066CE /* AppDelegate.swift */,
 				BD791FDA25E43CE700F066CE /* SceneDelegate.swift */,
-				97961A7525E8190C008C534F /* PlanetsView.storyboard */,
-				97961A7A25E81923008C534F /* PlanetsViewController.swift */,
-				9764C06E25ED862C0039CD62 /* Moons.swift */,
-				9764C05F25ED64CA0039CD62 /* MoonsCollectionViewCell.swift */,
-				BD791FDC25E43CE700F066CE /* ViewController.swift */,
-				BD791FDE25E43CE700F066CE /* Main.storyboard */,
-				BD51AD2C25F00CD8000F86C3 /* Resource */,
 				BD791FE125E43CE700F066CE /* Assets.xcassets */,
 				BD791FE625E43CE700F066CE /* Info.plist */,
 				BDD1534425E4ED8200DD2A4D /* DataComponents.swift */,
@@ -289,13 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD51AD3025F00D1F000F86C3 /* Kalam-Bold.ttf in Resources */,
 				BDD1535B25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard in Resources */,
 				BD791FE525E43CE700F066CE /* LaunchScreen.storyboard in Resources */,
-				BD51AD3125F00D1F000F86C3 /* Kalam-Regular.ttf in Resources */,
 				BD791FE225E43CE700F066CE /* Assets.xcassets in Resources */,
 				BD791FE025E43CE700F066CE /* Main.storyboard in Resources */,
-				BD51AD3225F00D1F000F86C3 /* Kalam-Light.ttf in Resources */,
 				97961A7625E8190C008C534F /* PlanetsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HKSJLM4DRR;
+				DEVELOPMENT_TEAM = 9X475P5993;
 				INFOPLIST_FILE = SolarSystemApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HKSJLM4DRR;
+				DEVELOPMENT_TEAM = 9X475P5993;
 				INFOPLIST_FILE = SolarSystemApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -18,6 +18,7 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBOutlet var size: UILabel!
     @IBOutlet var gravity: UILabel!
     @IBOutlet var discoveryDate: UILabel!
+    @IBOutlet var alternativeName: UILabel!
     @IBOutlet var boardView: UIView!
     @IBOutlet var stackView1: UIStackView!
     
@@ -31,16 +32,17 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         planetImage.image = UIImage(named: id)
         planetName.text = "\(data.englishName ?? "???")"
-        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0) Km"
-        gravity.text = "Gravity: \(data.gravity ?? 0) m.s−2"
+        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0)"
+        gravity.text = "Gravity: \(data.gravity ?? 0)"
         discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
+        alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
         
         moonsCV.delegate = self
         moonsCV.dataSource = self
         moonsList = data.moons ?? []
         
         stackView1.isAccessibilityElement = true
-        stackView1.accessibilityLabel = "\(planetName.text!), \(size.text!), \(gravity.text!), \(discoveryDate.text!)"
+        stackView1.accessibilityLabel = "\(planetName.text!), \(size.text!), \(gravity.text!), \(discoveryDate.text!), \(alternativeName.text!)"
         stackView1.accessibilityHint = "Select a moon down below to see the details of it"
         
         planetImage.isAccessibilityElement = true
