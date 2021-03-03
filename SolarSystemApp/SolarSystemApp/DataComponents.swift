@@ -58,3 +58,22 @@ func getData(from body: String, fullUrl: Bool) -> Body{
     group.wait()
     return res
 }
+
+class UserDefaultManager{
+    
+    enum Key :String {
+        case alreadyOpened = "alreadyOpened"
+    }
+    
+    static let shared = UserDefaultManager()
+    private var userDefaults : UserDefaults
+    private init() {self.userDefaults = UserDefaults.standard}
+    
+    func getIsFirstTime(forKey key : Key) -> Bool {
+        return userDefaults.bool(forKey: key.rawValue)
+    }
+    
+    func storeValue(forKey key : Key, value : Any){
+        userDefaults.set(value, forKey: key.rawValue)
+    }
+}
