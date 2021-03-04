@@ -196,10 +196,15 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="ZWJ-lp-Gbp">
                             <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            <accessibility key="accessibilityConfiguration" hint="Press button down below to start">
+                                <string key="label">Welcome to Solarya!, This is an app where you can learn more about our Solar System. To start just zoom in and click on a planet or the sun, tehn read the informations about it. You can also learn abour the moons of each planet, so don't forget to click on them too!, Let's begin?</string>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
                         </imageView>
                         <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-dD-Gjo">
                             <rect key="frame" x="379.5" y="310" width="137" height="35"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" hint="Double tap to select this button" label="Ok, let's go!"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="137" id="vj1-Hs-avx"/>
                             </constraints>
