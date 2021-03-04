@@ -31,8 +31,8 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         planetImage.image = UIImage(named: id)
         planetName.text = "\(data.englishName ?? "???")"
-        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0)"
-        gravity.text = "Gravity: \(data.gravity ?? 0)"
+        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0) Km"
+        gravity.text = "Gravity: \(data.gravity ?? 0) m.s-2"
         discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
         
         moonsCV.delegate = self
