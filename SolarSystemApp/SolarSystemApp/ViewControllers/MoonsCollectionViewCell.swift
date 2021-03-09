@@ -15,10 +15,10 @@ class MoonsCollectionViewCell: UICollectionViewCell {
     
     func configure(with moon: Moon){
         
-        let data = getData(from: moon.rel!, fullUrl: true)
+        let data = request?.bodies.filter({$0.name == moon.moon})[0]
         
-        moonImg.image = UIImage(named: data.englishName!)
-        moonName.text = data.englishName
+        moonImg.image = UIImage(named: (data?.englishName)!)
+        moonName.text = data?.englishName
         
         moonImg.isAccessibilityElement = true
         moonImg.accessibilityLabel = "\(moonName.text!)"

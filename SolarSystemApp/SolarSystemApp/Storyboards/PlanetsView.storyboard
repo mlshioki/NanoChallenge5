@@ -160,6 +160,10 @@
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moon" translatesAutoresizingMaskIntoConstraints="NO" id="SQv-h5-iBf">
                                                                             <rect key="frame" x="0.0" y="0.0" width="59" height="52.5"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <accessibility key="accessibilityConfiguration">
+                                                                                <accessibilityTraits key="traits" button="YES"/>
+                                                                                <bool key="isElement" value="NO"/>
+                                                                            </accessibility>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS5-XN-aXm">
                                                                             <rect key="frame" x="16" y="52.5" width="27" height="13.5"/>
@@ -255,10 +259,11 @@
                         <outlet property="discoveryDate" destination="CbK-az-l9m" id="qwu-Kt-20b"/>
                         <outlet property="gravity" destination="kkV-uE-Ml1" id="dPA-mP-rUe"/>
                         <outlet property="moonsCV" destination="npA-wY-BOI" id="vgm-Hp-r8Y"/>
+                        <outlet property="moonsLabel" destination="ZfY-BS-1be" id="okz-W7-RNs"/>
                         <outlet property="planetImage" destination="fHg-n2-mwI" id="iK3-qs-zZB"/>
                         <outlet property="planetName" destination="od7-S6-C02" id="9CI-MI-xua"/>
                         <outlet property="size" destination="RZ9-Mc-3PJ" id="4Hn-qQ-bSB"/>
-                        <outlet property="stackView1" destination="AQA-Ys-mls" id="rQE-Lg-dLd"/>
+                        <outlet property="stackView1" destination="AQA-Ys-mls" id="dFL-1f-GdA"/>
                         <segue destination="i8x-Q5-WiN" kind="show" identifier="MoonViewSegueIdentifier" id="628-ay-cDq"/>
                     </connections>
                 </viewController>

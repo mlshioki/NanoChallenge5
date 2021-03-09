@@ -11,7 +11,12 @@ import Foundation
 //    func getData(url: String) -> Body
 //}
 
+struct AllBodies: Codable{
+    let bodies: [Body]!
+}
+
 struct Body: Codable{
+    let name: String?
     let englishName: String?
     let gravity: Double?
     let meanRadius: Double?
@@ -27,8 +32,15 @@ struct Moon: Codable {
 
 //usar a func abaixo quando for delegar para outra classe
 
-func getData(from body: String, fullUrl: Bool) -> Body{
-    var res: Body!
+func CheckInfoExists(info: String) -> String{
+    if(info != ""){
+        return info
+    }
+    return "???"
+}
+
+func getData(from body: String, fullUrl: Bool) -> AllBodies{
+    var res: AllBodies!
     
     var url: String
     
@@ -45,9 +57,9 @@ func getData(from body: String, fullUrl: Bool) -> Body{
             print("error getData")
             return
         }
-        var result: Body
+        var result: AllBodies
         do {
-            result = try JSONDecoder().decode(Body.self, from: data)
+            result = try JSONDecoder().decode(AllBodies.self, from: data)
             res = result
         }
         catch {

@@ -20,24 +20,26 @@ class DetailedScreenMoonViewController: UIViewController {
     
     @IBOutlet var stackView: UIStackView!
     
+    var audio = AudioManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let data = getData(from: id, fullUrl: true)
+        let data = request?.bodies.filter({$0.name == id})[0]
         
-        id = data.englishName ?? "???"
-        
+        id = CheckInfoExists(info: (data?.englishName)!)
+
         moonImage.image = UIImage(named: id)
-        
+
         if((moonImage.image) == nil){
             moonImage.image = UIImage(named: "Moon")
         }
-        
-        moonName.text = "\(data.englishName ?? "???")"
-        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0) Km"
-        gravity.text = "Gravity: \(data.gravity ?? 0) m.s-2"
-        discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
-        alternativeName.text = "Alternative Name: \(data.alternativeName ?? "???")"
+
+        moonName.text = "\(CheckInfoExists(info: (data?.englishName)!))"
+        size.text = "Size (Mean Radius): \(data?.meanRadius ?? 0) Km"
+        gravity.text = "Gravity: \(data?.gravity ?? 0) m.s-2"
+        discoveryDate.text = "Discovery Date: \(CheckInfoExists(info: (data?.discoveryDate)!))"
+        alternativeName.text = "Alternative Name: \(CheckInfoExists(info: (data?.alternativeName)!))"
         
         stackView.isAccessibilityElement = true
         stackView.accessibilityLabel = "\(moonName.text!), \(size.text!), \(gravity.text!), \(discoveryDate.text!), \(alternativeName.text!)"
@@ -47,6 +49,7 @@ class DetailedScreenMoonViewController: UIViewController {
     }
     
     @IBAction func backBtn(_ sender: Any) {
+        audio.play(sound: .backButton)
         dismiss(animated: true, completion: nil)
     }
 }

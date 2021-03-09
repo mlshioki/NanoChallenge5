@@ -20,41 +20,49 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBOutlet var discoveryDate: UILabel!
     @IBOutlet var boardView: UIView!
     @IBOutlet var stackView1: UIStackView!
+    @IBOutlet var moonsLabel: UILabel!
     
     var moonsList: [Moon] = []
     let moonIdentifier = "MoonViewSegueIdentifier"
     
+    var audio = AudioManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let data = getData(from: id, fullUrl: false)
+        let data = request?.bodies.filter({return $0.englishName == id})[0]
         
-        planetImage.image = UIImage(named: id)
-        planetName.text = "\(data.englishName ?? "???")"
-        size.text = "Size (Mean Radius): \(data.meanRadius ?? 0) Km"
-        gravity.text = "Gravity: \(data.gravity ?? 0) m.s-2"
-        discoveryDate.text = "Discovery Date: \(data.discoveryDate ?? "???")"
-        
+        planetImage.image = UIImage(named: CheckInfoExists(info: (data?.englishName)!))
+        planetName.text = CheckInfoExists(info: (data?.englishName)!)
+        size.text = "Size (Mean Radius): \(data?.meanRadius ?? 0) Km"
+        gravity.text = "Gravity: \(data?.gravity ?? 0) m.s-2"
+        discoveryDate.text = "Discovery Date: \(CheckInfoExists(info: (data?.discoveryDate)!))"
+
         moonsCV.delegate = self
         moonsCV.dataSource = self
-        moonsList = data.moons ?? []
+        moonsList = data?.moons ?? []
         
+        if(moonsList.count < 1){
+            moonsLabel.text = "Moon(s): None"
+        }
+
         stackView1.isAccessibilityElement = true
         stackView1.accessibilityLabel = "\(planetName.text!), \(size.text!), \(gravity.text!), \(discoveryDate.text!)"
         stackView1.accessibilityHint = "Select a moon down below to see the details of it"
-        
+
         planetImage.isAccessibilityElement = true
         planetImage.accessibilityLabel = "Image of \(planetName.text!)"
     }
     
     @IBAction func backBtn(_ sender: Any) {
+        audio.play(sound: .backButton)
         dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let moon = sender as! Moon
         if let vc = segue.destination as? DetailedScreenMoonViewController{
-            vc.id = moon.rel!
+            vc.id = moon.moon!
         }
     }
     
@@ -73,6 +81,7 @@ class PlanetsScreen: UIViewController, UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        audio.play(sound: .button)
         let moon = moonsList[indexPath.item]
         performSegue(withIdentifier: moonIdentifier, sender: moon)
     }

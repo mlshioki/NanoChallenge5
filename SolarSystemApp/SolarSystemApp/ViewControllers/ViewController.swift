@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
+import Foundation
+
+var request: AllBodies?
 
 class ViewController: UIViewController, UIScrollViewDelegate {
+    
+    var audio = AudioManager()
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var thisView: UIView!
@@ -26,6 +32,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var blurView: UIVisualEffectView!
     
     @IBAction func helpBtn(_ sender: Any) {
+        audio.play(sound: .button)
         animateIn(x: blurView)
         animateIn(x: popUpView)
     }
@@ -38,11 +45,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
-    var change: changePlanetsScreen!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        request = getData(from: "https://api.le-systeme-solaire.net/rest/bodies", fullUrl: true)
+        
             scrollView.delegate = self
             scrollView.minimumZoomScale = 1.0;
             scrollView.maximumZoomScale = 3.0
@@ -103,9 +110,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         if let vc = segue.destination as? PlanetsScreen{
             vc.id = sender as! String
         }
+        else if let vc = segue.destination as? DetailedScreenMoonViewController {
+            vc.id = sender as! String
+        }
     }
     
     func OpenDetailPlanet(planet: String){
+        audio.play(sound: .button)
         performSegue(withIdentifier: "goToPlanetsView", sender: planet)
     }
     
@@ -147,12 +158,5 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             x.removeFromSuperview()
         })
     }
-}
-
-
-
-
-protocol changePlanetsScreen {
-    func changeToPlanetsDetail(id: String, sender: Any?)
 }
 

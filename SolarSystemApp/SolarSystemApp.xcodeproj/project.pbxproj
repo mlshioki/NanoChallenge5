@@ -22,6 +22,9 @@
 		BD791FE525E43CE700F066CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD791FE325E43CE700F066CE /* LaunchScreen.storyboard */; };
 		BD791FF025E43CE800F066CE /* SolarSystemAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FEF25E43CE800F066CE /* SolarSystemAppTests.swift */; };
 		BD791FFB25E43CE800F066CE /* SolarSystemAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD791FFA25E43CE800F066CE /* SolarSystemAppUITests.swift */; };
+		BDC3E7E425F7302600EB7EC1 /* btnPressed.wav in Resources */ = {isa = PBXBuildFile; fileRef = BDC3E7E325F7302600EB7EC1 /* btnPressed.wav */; };
+		BDC3E80525F74F8C00EB7EC1 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3E80425F74F8C00EB7EC1 /* AudioManager.swift */; };
+		BDC3E81825F7544600EB7EC1 /* backBtn.wav in Resources */ = {isa = PBXBuildFile; fileRef = BDC3E81725F7544600EB7EC1 /* backBtn.wav */; };
 		BDD1534525E4ED8200DD2A4D /* DataComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1534425E4ED8200DD2A4D /* DataComponents.swift */; };
 		BDD1535B25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD1535A25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard */; };
 		BDD1536025E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1535F25E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift */; };
@@ -66,6 +69,10 @@
 		BDC2D77025F03ED000180E59 /* Kalam-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Bold.ttf"; sourceTree = "<group>"; };
 		BDC2D77125F03ED000180E59 /* Kalam-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Light.ttf"; sourceTree = "<group>"; };
 		BDC2D77225F03ED000180E59 /* Kalam-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Regular.ttf"; sourceTree = "<group>"; };
+		BDC3E7E325F7302600EB7EC1 /* btnPressed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btnPressed.wav; sourceTree = "<group>"; };
+		BDC3E7EC25F7380B00EB7EC1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BDC3E80425F74F8C00EB7EC1 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		BDC3E81725F7544600EB7EC1 /* backBtn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = backBtn.wav; sourceTree = "<group>"; };
 		BDD1534425E4ED8200DD2A4D /* DataComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataComponents.swift; sourceTree = "<group>"; };
 		BDD1535A25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedScreenMoon.storyboard; sourceTree = "<group>"; };
 		BDD1535F25E6CC8B00DD2A4D /* DetailedScreenMoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedScreenMoonViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 				BD791FEE25E43CE800F066CE /* SolarSystemAppTests */,
 				BD791FF925E43CE800F066CE /* SolarSystemAppUITests */,
 				BD791FD625E43CE700F066CE /* Products */,
+				BDC3E7EB25F7380B00EB7EC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +155,10 @@
 				BDC2D76F25F03EB000180E59 /* Resources */,
 				BD791FD825E43CE700F066CE /* AppDelegate.swift */,
 				BD791FDA25E43CE700F066CE /* SceneDelegate.swift */,
+				BDD1534425E4ED8200DD2A4D /* DataComponents.swift */,
+				BDC3E80425F74F8C00EB7EC1 /* AudioManager.swift */,
 				BD791FE125E43CE700F066CE /* Assets.xcassets */,
 				BD791FE625E43CE700F066CE /* Info.plist */,
-				BDD1534425E4ED8200DD2A4D /* DataComponents.swift */,
 			);
 			path = SolarSystemApp;
 			sourceTree = "<group>";
@@ -175,11 +184,45 @@
 		BDC2D76F25F03EB000180E59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BDC3E7DE25F71EFA00EB7EC1 /* Sound */,
+				BDC3E7DD25F71EF000EB7EC1 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDC3E7DD25F71EF000EB7EC1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
 				BDC2D77025F03ED000180E59 /* Kalam-Bold.ttf */,
 				BDC2D77125F03ED000180E59 /* Kalam-Light.ttf */,
 				BDC2D77225F03ED000180E59 /* Kalam-Regular.ttf */,
 			);
-			path = Resources;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BDC3E7DE25F71EFA00EB7EC1 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				BDC3E7DF25F71F0300EB7EC1 /* SFX */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		BDC3E7DF25F71F0300EB7EC1 /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				BDC3E81725F7544600EB7EC1 /* backBtn.wav */,
+				BDC3E7E325F7302600EB7EC1 /* btnPressed.wav */,
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
+		BDC3E7EB25F7380B00EB7EC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDC3E7EC25F7380B00EB7EC1 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +331,8 @@
 				BD22E63925F04287007F5654 /* Kalam-Regular.ttf in Resources */,
 				BDD1535B25E6CC6100DD2A4D /* DetailedScreenMoon.storyboard in Resources */,
 				BD791FE525E43CE700F066CE /* LaunchScreen.storyboard in Resources */,
+				BDC3E7E425F7302600EB7EC1 /* btnPressed.wav in Resources */,
+				BDC3E81825F7544600EB7EC1 /* backBtn.wav in Resources */,
 				BD791FE225E43CE700F066CE /* Assets.xcassets in Resources */,
 				BD22E63A25F04287007F5654 /* Kalam-Light.ttf in Resources */,
 				BD791FE025E43CE700F066CE /* Main.storyboard in Resources */,
@@ -323,6 +368,7 @@
 				9764C06025ED64CA0039CD62 /* MoonsCollectionViewCell.swift in Sources */,
 				BD791FDD25E43CE700F066CE /* ViewController.swift in Sources */,
 				BD791FD925E43CE700F066CE /* AppDelegate.swift in Sources */,
+				BDC3E80525F74F8C00EB7EC1 /* AudioManager.swift in Sources */,
 				BD791FDB25E43CE700F066CE /* SceneDelegate.swift in Sources */,
 				97961A7B25E81923008C534F /* PlanetsViewController.swift in Sources */,
 			);
@@ -501,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HKSJLM4DRR;
 				INFOPLIST_FILE = SolarSystemApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -522,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HKSJLM4DRR;
 				INFOPLIST_FILE = SolarSystemApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
