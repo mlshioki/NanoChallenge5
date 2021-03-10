@@ -18,7 +18,13 @@ class MoonsCollectionViewCell: UICollectionViewCell {
         let data = request?.bodies.filter({$0.name == moon.moon})[0]
         
         moonImg.image = UIImage(named: (data?.englishName)!)
-        moonName.text = data?.englishName
+        
+        if(data?.englishName == ""){
+            moonName.text = data?.alternativeName
+        }
+        else{
+            moonName.text = data?.englishName
+        }
         
         moonImg.isAccessibilityElement = true
         moonImg.accessibilityLabel = "\(moonName.text!)"

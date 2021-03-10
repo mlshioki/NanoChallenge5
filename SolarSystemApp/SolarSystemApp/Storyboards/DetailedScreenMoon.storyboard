@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x4z-Kk-Azd">
-    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -41,10 +41,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="518" height="304"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-eP-RAr">
-                                        <rect key="frame" x="58" y="45" width="427" height="214"/>
+                                        <rect key="frame" x="58" y="35" width="427" height="234"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-DA-Ec7">
-                                                <rect key="frame" x="0.0" y="0.0" width="427" height="30.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="427" height="35"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Terra">
@@ -59,7 +59,7 @@
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A40-yy-7gM">
-                                                <rect key="frame" x="0.0" y="45.666666666666657" width="427" height="31"/>
+                                                <rect key="frame" x="0.0" y="50" width="427" height="34.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
@@ -72,7 +72,7 @@
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-v1-PNz">
-                                                <rect key="frame" x="0.0" y="91.666666666666657" width="427" height="30.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="427" height="35"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
@@ -85,7 +85,7 @@
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-f2-7KA">
-                                                <rect key="frame" x="0.0" y="137.33333333333334" width="427" height="31"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="427" height="34.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
@@ -99,7 +99,7 @@
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG5-0M-ItI">
-                                                <rect key="frame" x="0.0" y="183.33333333333331" width="427" height="30.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="199" width="427" height="35"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
@@ -120,16 +120,20 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6Wk-nx-BRE" secondAttribute="bottom" id="6sN-TA-fSq"/>
                                     <constraint firstItem="6Wk-nx-BRE" firstAttribute="leading" secondItem="knG-vU-HsW" secondAttribute="leading" id="CzS-uA-Squ"/>
-                                    <constraint firstAttribute="bottom" secondItem="TfP-eP-RAr" secondAttribute="bottom" constant="45" id="HcG-C8-Qgo"/>
+                                    <constraint firstAttribute="bottom" secondItem="TfP-eP-RAr" secondAttribute="bottom" constant="35" id="HcG-C8-Qgo">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailingMargin" secondItem="TfP-eP-RAr" secondAttribute="trailing" constant="25" id="U0p-qd-9Ji"/>
                                     <constraint firstItem="6Wk-nx-BRE" firstAttribute="top" secondItem="knG-vU-HsW" secondAttribute="top" id="Xln-xP-pBM"/>
                                     <constraint firstItem="TfP-eP-RAr" firstAttribute="leading" secondItem="knG-vU-HsW" secondAttribute="leadingMargin" constant="50" id="q9a-DF-BOG"/>
-                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="top" secondItem="knG-vU-HsW" secondAttribute="top" constant="45" id="qFI-IN-K2C"/>
+                                    <constraint firstItem="TfP-eP-RAr" firstAttribute="top" secondItem="knG-vU-HsW" secondAttribute="top" constant="35" id="qFI-IN-K2C">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="6Wk-nx-BRE" secondAttribute="trailing" id="uF3-Mv-Orw"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhS-oM-EXE" userLabel="backBtn">
-                                <rect key="frame" x="31.999999999999996" y="32" width="54.666666666666657" height="21"/>
+                                <rect key="frame" x="32" y="32" width="54.5" height="21"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.backward" catalog="system">
                                     <attributedString key="attributedTitle">
@@ -157,14 +161,14 @@
                             </constraint>
                             <constraint firstItem="DFR-lh-lvE" firstAttribute="leading" secondItem="boF-dt-NsK" secondAttribute="leading" constant="10" id="KBW-Hv-5eG"/>
                             <constraint firstAttribute="bottom" secondItem="knG-vU-HsW" secondAttribute="bottom" constant="55" id="KLx-lU-NCb">
-                                <variation key="heightClass=compact-widthClass=compact" constant="35"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="45"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="centerY" secondItem="uQ2-ck-zJM" secondAttribute="centerY" id="LAk-Ad-qiG"/>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="centerX" secondItem="uQ2-ck-zJM" secondAttribute="centerX" id="MVC-XA-Ves"/>
                             <constraint firstItem="9W0-57-Xxi" firstAttribute="leading" secondItem="uQ2-ck-zJM" secondAttribute="leading" id="Qfw-Fp-rQy"/>
                             <constraint firstItem="knG-vU-HsW" firstAttribute="top" secondItem="uQ2-ck-zJM" secondAttribute="top" constant="55" id="SoU-BL-21X">
-                                <variation key="heightClass=compact-widthClass=compact" constant="35"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="45"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                             </constraint>
                             <constraint firstItem="fIR-eF-ao2" firstAttribute="leading" secondItem="DFR-lh-lvE" secondAttribute="trailing" constant="150" id="Ubf-QT-twC"/>

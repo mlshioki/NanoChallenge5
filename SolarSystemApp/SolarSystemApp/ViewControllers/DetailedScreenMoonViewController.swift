@@ -37,7 +37,7 @@ class DetailedScreenMoonViewController: UIViewController {
 
         moonName.text = "\(CheckInfoExists(info: (data?.englishName)!))"
         size.text = "Size (Mean Radius): \(data?.meanRadius ?? 0) Km"
-        gravity.text = "Gravity: \(data?.gravity ?? 0) m.s-2"
+        gravity.text = "Gravity: \(data?.gravity ?? 0) m/s²"
         discoveryDate.text = "Discovery Date: \(CheckInfoExists(info: (data?.discoveryDate)!))"
         alternativeName.text = "Alternative Name: \(CheckInfoExists(info: (data?.alternativeName)!))"
         
