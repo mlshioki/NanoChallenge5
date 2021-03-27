@@ -73,8 +73,8 @@ func getData(from body: String, fullUrl: Bool) -> AllBodies{
 
 class UserDefaultManager{
     
-    enum Key :String {
-        case alreadyOpened = "alreadyOpened"
+    enum Key : String {
+        case alreadyOpened
     }
     
     static let shared = UserDefaultManager()

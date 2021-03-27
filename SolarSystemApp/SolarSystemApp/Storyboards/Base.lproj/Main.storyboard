@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN1-3R-9sV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="XN1-3R-9sV">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Space" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-D0-uJv">
+                                        <rect key="frame" x="-50" y="-50" width="996" height="514"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-xt-2gV">
                                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                         <subviews>
@@ -223,12 +226,16 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Zp8-D0-uJv" firstAttribute="leading" secondItem="etx-40-NNO" secondAttribute="leading" constant="-50" id="6RQ-Ks-l0A"/>
                                     <constraint firstAttribute="bottom" secondItem="JCn-xt-2gV" secondAttribute="bottom" id="9gd-8X-f5u"/>
                                     <constraint firstItem="JCn-xt-2gV" firstAttribute="leading" secondItem="XN1-3R-9sV" secondAttribute="leading" id="ADi-bK-xYw"/>
+                                    <constraint firstItem="etx-40-NNO" firstAttribute="trailing" secondItem="Zp8-D0-uJv" secondAttribute="trailing" constant="-50" id="Elf-wg-z3o"/>
+                                    <constraint firstItem="Zp8-D0-uJv" firstAttribute="top" secondItem="etx-40-NNO" secondAttribute="top" constant="-50" id="Vms-jJ-TbF"/>
                                     <constraint firstAttribute="trailing" secondItem="JCn-xt-2gV" secondAttribute="trailing" id="dct-oU-1Ir"/>
                                     <constraint firstItem="JCn-xt-2gV" firstAttribute="top" secondItem="XN1-3R-9sV" secondAttribute="top" id="jTd-7W-f1t"/>
                                     <constraint firstItem="JCn-xt-2gV" firstAttribute="height" secondItem="XN1-3R-9sV" secondAttribute="height" id="kVf-AY-XfX"/>
                                     <constraint firstItem="JCn-xt-2gV" firstAttribute="width" secondItem="XN1-3R-9sV" secondAttribute="width" id="sdq-Cq-C08"/>
+                                    <constraint firstItem="etx-40-NNO" firstAttribute="bottom" secondItem="Zp8-D0-uJv" secondAttribute="bottom" constant="-50" id="tUr-Vm-4Hc"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Xle-hy-Ape"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="etx-40-NNO"/>
@@ -324,6 +331,7 @@
     </scenes>
     <resources>
         <image name="Sistema solar" width="3790" height="2679"/>
+        <image name="Space" width="5262" height="3720"/>
         <image name="Tutorial" width="7308" height="3375"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

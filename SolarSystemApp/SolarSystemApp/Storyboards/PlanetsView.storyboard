@@ -23,7 +23,6 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXc-TB-4ly" userLabel="Middle">
                                 <rect key="frame" x="443" y="202" width="10" height="10"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="Loc-ja-alb"/>
                                     <constraint firstAttribute="height" constant="10" id="h07-GX-Nvk"/>
@@ -220,7 +219,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-tb-afc" userLabel="backBtn">
-                                <rect key="frame" x="32" y="32" width="54.5" height="21"/>
+                                <rect key="frame" x="32" y="32" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6nk-97-sT0"/>
+                                    <constraint firstAttribute="width" constant="80" id="vLn-lJ-dba"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.backward" catalog="system">
                                     <attributedString key="attributedTitle">
